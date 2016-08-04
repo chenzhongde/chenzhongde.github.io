@@ -1,10 +1,9 @@
 <html>
 
 <head>
-<title>ILoveYou</title>
+<title>ForeverLove</title>
 
 <style type="text/css">
-
 
 #bgimag{ 
 position:fixed; 
@@ -31,17 +30,17 @@ border:0;
  height: 1.5em;
  width:10em;
  font-size:200%;
- font-family:Arial;
- color:#F00;
+ font-family: digit;
+ color:#FFD700;
  text-align: center;
  border-width: 1px;
  border-style:solid;
  border-color:#F00;
  }
-
-
 </style>
 
+<script type="text/javascript" class="autoinsert" src="js/jquery-1.2.6.min.js"></script> 
+<script src="js/snowfall.jquery.js"></script> 
 
 </head>
 
@@ -49,6 +48,7 @@ border:0;
 <body>
 
 <div id="bgimag"><img src="bg.jpg" /></div> 
+<div style="position:absolute; height:400px; overflow:auto"></div>
 
 <div id="input">
 <form name="input">
@@ -66,16 +66,27 @@ border:0;
 
 
 <script>
+
    function check(){
       var name=document.getElementById("name").value;
 	  var pass=document.getElementById("pass").value;
 	  if(name=="love" && pass=="1314"){
-      window.document.submit.action="home.html";
+      window.document.submit.action="cover.html";
       window.document.submit.submit();
    }else{
-   alert("Object Not Found !");
+   alert("Object Not Found");
    }
    }
+   
+   
+    $(document).snowfall('clear');
+    $(document).snowfall({
+        image: "huaban.png",
+        flakeCount: 50,
+        minSize: 5,
+        maxSize: 22
+   });  
+   
 </script>
 
 </body>
