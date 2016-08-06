@@ -39,9 +39,10 @@ border:0;
  }
 </style>
 
+<!--
 <script type="text/javascript" class="autoinsert" src="js/jquery-1.2.6.min.js"></script> 
 <script src="js/snowfall.jquery.js"></script> 
-
+-->
 </head>
 
 
@@ -49,6 +50,11 @@ border:0;
 
 <div id="bgimag"><img src="bg.jpg" /></div> 
 <div style="position:absolute; height:400px; overflow:auto"></div>
+
+<div>
+<span>Kick me Please!</span>
+<audio src="record.mp3" id="audio" controls="controls" ></audio>
+</div>
 
 <div id="input">
 <form name="input">
@@ -78,7 +84,7 @@ border:0;
    }
    }
    
-   
+ <!--  
     $(document).snowfall('clear');
     $(document).snowfall({
         image: "huaban.png",
@@ -86,7 +92,26 @@ border:0;
         minSize: 5,
         maxSize: 22
    });  
-   
+-->
+
+var audio ;
+window.onload = function(){
+ initAudio();
+}
+var initAudio = function(){
+ audio = document.getElementById('audio');
+}
+ 
+function playOrPaused(id,obj){
+ if(audio.paused){
+  audio.play();
+  obj.innerHTML='ÔÝÍ£';
+  return;
+ }
+ audio.pause();
+ obj.innerHTML='²¥·Å';
+}
+
 </script>
 
 </body>
