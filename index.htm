@@ -17,13 +17,21 @@ z-index:-1;
 height:100%; 
 width:100%; 
 border:0; 
-} 
-
+}
+#notice{
+ font-size:150%;
+ font-family: digit;
+ color:#FFD700;
+ margin: 8% 20% 0% 40%;	
+}
+#audio{
+ margin: 0% 20% 0% 26%;	
+}
 #input {   
-	margin: 10% 20% 0% 40%;	
+ margin: 3% 20% 0% 40%;	
 }
 #submit {   
-	margin: 2% 0% 0% 48%;	
+ margin: 2% 0% 0% 48%;	
 }
  .loginform {
  background: transparent;
@@ -49,10 +57,9 @@ border:0;
 <body>
 
 <div id="bgimag"><img src="bg.jpg" /></div> 
-<div style="position:absolute; height:400px; overflow:auto"></div>
 
-<div>
-<span>Kick me Please!</span>
+<div id="notice">Kick me!</div>
+<div id="audio">
 <audio src="record.mp3" id="audio" controls="controls" ></audio>
 </div>
 
